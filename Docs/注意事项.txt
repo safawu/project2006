@@ -1,0 +1,2 @@
+如果出现打不开项目的情况，请先将vs2010升级到sp1。
+并下载xna game studio 4.0：http://www.microsoft.com/en-us/download/details.aspx?id=23714

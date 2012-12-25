@@ -1,0 +1,42 @@
+﻿设计总则：
+让专业的模块做专业的事
+
+基本要求：
+1.基础模块（音效，输入，图形，读写）必须高度独立，不依赖具体内容
+2.涉及静态常量，尽量把相关常量组织在一个文件里
+3.用多态
+
+目录结构
+Audio --音乐，音效
+Config  --游戏相关的配置存取
+GameElement  --游戏内容元素
+Graphics  --图形相关
+	|-Interface  --界面元素，输入框，按钮，滚动框
+	|-Skin --可以自由配置的皮肤（暂时留空）
+	|-Sprite  --基本图像元素
+	|-Physcis --物理，包括完整的碰撞运算
+	|-Transition --动画相关
+Input --输入处理
+IO  --外部文件读写
+Stage --处理游戏的具体表现，舞台切换
+Logic --脚本，AI
+	|-AI 
+	|-Script
+Util --辅助类
+	|-ExLibary  --外部库的引入
+	|-Algorithm  --常用算法和结构
+	|-Math --数学运算相关
+Network --网络基础，游戏的具体封包结构等在Element里
+
+
+除了GameElement和Stage，其他部分理论上不设计游戏内容，可以独立出来当作引擎使用
+但特殊的Input，Audio处理，允许以Manager的形式，涉及游戏内容
+
+程序流程
+GameCore 处理初始化加载
+GameCore创建舞台管理器
+GameCore创建 “首界面”舞台，加入舞台管理器
+GameCore执行Update-Draw 循环，其中主要是调用舞台的Draw函数
+
+在 当前舞台 中处理交互，并改变自身的显示逻辑
+涉及舞台切换时，调用GameCore方法，GameCore将在下一个循环时完成切换
