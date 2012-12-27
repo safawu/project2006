@@ -72,6 +72,7 @@
     <Compile Include="Audio\AudioConst.cs" />
     <Compile Include="Audio\AudioManager.cs" />
     <Compile Include="Config\ConfigManager.cs" />
+    <Compile Include="Event\EventManager.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="GameMain.cs" />
     <Compile Include="Graphics\GraphicEnums.cs" />
@@ -80,16 +81,10 @@
     <Compile Include="Graphics\Physics\MassShape.cs" />
     <Compile Include="Graphics\Physics\PolygonCollision.cs" />
     <Compile Include="Graphics\Physics\Shape.cs" />
-    <Compile Include="Graphics\Skin\SkinManager.cs" />
     <Compile Include="Graphics\Sprite\Sprite.cs" />
     <Compile Include="Graphics\Sprite\SpriteEnums.cs" />
     <Compile Include="Graphics\Sprite\SpriteManager.cs" />
     <Compile Include="Graphics\Sprite\Text.cs" />
-    <Compile Include="Graphics\Transition\ColorTransition.cs" />
-    <Compile Include="Graphics\Transition\FloatTransition.cs" />
-    <Compile Include="Graphics\Transition\IntTransition.cs" />
-    <Compile Include="Graphics\Transition\Transition.cs" />
-    <Compile Include="Graphics\Transition\VectorTransition.cs" />
     <Compile Include="Input\InputEnums.cs" />
     <Compile Include="Input\InputManager.cs" />
     <Compile Include="Input\KeyHandler.cs" />
@@ -101,9 +96,6 @@
     <Compile Include="IO\RWSqlLite.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Stage\Menu\StageMainMenu.cs" />
-    <Compile Include="Stage\StageBase.cs" />
-    <Compile Include="Stage\StageEnums.cs" />
     <Compile Include="TestFriends.cs" />
     <Compile Include="Util\ExceptionManager.cs" />
     <Compile Include="Util\ExLibary\Un4seen\Bass\AddOn\Fx\BassFx.cs" />
@@ -217,12 +209,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="GameElement\Player\" />
-    <Folder Include="GameElement\Replay\" />
-    <Folder Include="GameElement\Score\" />
     <Folder Include="Graphics\Interface\" />
-    <Folder Include="Logic\AI\" />
-    <Folder Include="Logic\Script\" />
     <Folder Include="Network\" />
     <Folder Include="Util\Algorithm\" />
   </ItemGroup>

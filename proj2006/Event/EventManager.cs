@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace project2006.Graphics.Skin
+namespace proj2006.Event
 {
-    class SkinManager
+    class EventManager
     {
     }
 }
